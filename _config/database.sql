@@ -1,12 +1,39 @@
-create table users
-(
-    users_id       bigint auto_increment
-        primary key,
-    users_email    varchar(255) not null,
-    users_password text         not null,
-    users_username varchar(255) null,
-    constraint users_users_email_uindex
-        unique (users_email),
-    constraint users_users_id_uindex
-        unique (users_id)
+CREATE TABLE User (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Friend (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT,
+  friend_id INT,
+  status VARCHAR(20) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES User(id),
+  FOREIGN KEY (friend_id) REFERENCES User(id)
+);
+
+CREATE TABLE Room (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  type VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE UserRoom (
+  user_id INT,
+  room_id INT,
+  role VARCHAR(20) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES User(id),
+  FOREIGN KEY (room_id) REFERENCES Room(id)
+);
+
+CREATE TABLE Message (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT,
+  room_id INT,
+  content TEXT,
+  timestamp DATETIME,
+  FOREIGN KEY (user_id) REFERENCES User(id),
+  FOREIGN KEY (room_id) REFERENCES Room(id)
 );
