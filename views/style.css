@@ -1,0 +1,41 @@
+body {
+    background-color: #eef8f6;
+  }
+  
+  .room-list {
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+  }
+  
+  .mes {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    width: 100vh;
+  }
+  
+  .message-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+  }
+  
+  .message-input {
+    margin-top: 10px;
+  }
+  
+  #add-room-section {
+    margin-top: 20px;
+  }
+  #add-room-section form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  #add-room-title {
+        margin-bottom: 20px; /* Adjust the margin as needed */
+}
+  
