@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../assets/pictures/chat.png" type="image/png">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Chat Rooms - Login</title>
-</head>
-
-<body>
 
   <!-- Common Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
-      <img src="../assets/pictures/chat.png" alt="Logo" style="height: 30px; width: auto;">
+      <img src="./assets/pictures/chat.png" alt="Logo" style="height: 30px; width: auto;">
       Chat Rooms
     </a>
   </nav>
@@ -38,7 +26,7 @@
               </div>
               <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
-            <p class="mt-3 text-center">Don't have an account? <a href="register.html">Register</a></p>
+            <p class="mt-3 text-center">Don't have an account? <a href="index.php?page=register">Register</a></p>
           </div>
         </div>
       </div>
