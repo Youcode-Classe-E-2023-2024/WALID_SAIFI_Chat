@@ -7,6 +7,7 @@
       Chat Rooms
     </a>
   </nav>
+  
 
   <!-- Registration Page -->
   <div class="container mt-4">
