@@ -1,9 +1,9 @@
 <?php
-if (isset($_POST['REG'])) {
-    die('hello');
+if (isset($_POST['submit'])) {
     $username = $_POST['username']; 
     $password = $_POST['password'];
     $email = $_POST['email'];
-    $utilisateur::registre($username,$password,$email);
+    $user = new Utilisateur($username, $password, $email);
+    $user->registre();
 }
 ?>
