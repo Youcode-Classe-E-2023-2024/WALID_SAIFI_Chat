@@ -45,6 +45,7 @@ class Utilisateur {
         $insert->execute();
     }
 
+    
 
     public function login($enteredPassword, $email) {
         $sql_code = "SELECT * FROM utilisateur WHERE email = ?";
