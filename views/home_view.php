@@ -7,17 +7,17 @@
     </thead>
     <tbody>
 
-    <?php foreach ($users as $user) : ?>
+   <!-- <?php// foreach ($users as $user) : ?>
         <tr>
-            <td><?= $user['users_email'] ?></td>
-            <td><?= $user['users_username'] ?></td>
+            <td><?php//$user['users_email']; ?></td>
+            <td><?php //$user['users_username']; ?></td>
         </tr>
-    <?php endforeach; ?>
+    <?php// endforeach; ?>-->
 
     </tbody>
 </table>
 
-<form action="index.php?page=room_chat" method="POST">
+<form action="index.php?page=home" method="POST">
     <button type="submit" name="login">Login</button>
     <button type="submit" name="logout">Logout</button>
 </form>
