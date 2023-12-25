@@ -23,7 +23,6 @@ CREATE TABLE Room (
 CREATE TABLE UserRoom (
   user_id INT,
   room_id INT,
-  role VARCHAR(20) NOT NULL,
   FOREIGN KEY (user_id) REFERENCES User(id),
   FOREIGN KEY (room_id) REFERENCES Room(id)
 );
