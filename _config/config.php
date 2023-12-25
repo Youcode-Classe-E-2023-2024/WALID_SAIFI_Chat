@@ -24,6 +24,7 @@ define('PATH_REQUIRE', substr($_SERVER['SCRIPT_FILENAME'], 0, -9)); // inclusion
 define('PATH', substr($_SERVER['PHP_SELF'], 0, -9)); // pour les images et les fichiers
 define('__ROOT__', dirname(dirname(__FILE__)));
 
+
 /* db info */
 /*const DB_HOST = 'localhost';
 const DB_NAME = 'Chat';
