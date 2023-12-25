@@ -14,7 +14,7 @@
         <div class="card-body">
           <h2 class="card-title text-center mb-4">Register</h2>
 
-          <form id="registerForm" action="" method="post">
+          <form id="registerForm" action="register" method="post">
             <div class="form-group">
               <label for="registerEmail">Email</label>
               <input type="email" name="email" class="form-control" id="registerEmail" placeholder="Enter your email" required>
@@ -28,7 +28,7 @@
               <input type="password" name="password" class="form-control" id="registerPassword" placeholder="Enter password" required>
             </div>
 
-            <button type="submit" name="submit" class="btn btn-primary btn-block">Register</button>
+            <button type="submit" name="REG" class="">Register</button>
           </form>
 
           <p class="mt-3 text-center">Already have an account? <a href="index.php?page=login">Login</a></p>
@@ -43,23 +43,5 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-  // JavaScript code for registration logic
-  $(document).ready(function () {
-    $('#registerForm').submit(function (event) {
-      event.preventDefault();
-      // Implement your registration logic here
-      // Example: Validate inputs and register user using AJAX
-      // $.ajax({
-      //   type: 'POST',
-      //   url: 'register.php',
-      //   data: $(this).serialize(),
-      //   success: function(response) {
-      //     // Handle success response
-      //   },
-      //   error: function(error) {
-      //     // Handle error response
-      //   }
-      // });
-    });
-  });
+
 </script>
