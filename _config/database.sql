@@ -14,7 +14,7 @@ CREATE TABLE Friend (
   FOREIGN KEY (friend_id) REFERENCES utilisateur(id)
 );
 
-CREATE TABLE Room (
+CREATE TABLE room (
   id INT PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(255) NOT NULL,
 );
