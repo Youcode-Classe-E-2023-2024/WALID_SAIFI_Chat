@@ -40,10 +40,10 @@ class Utilisateur {
         $con = new Database();
         $hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO utilisateur (username, password, email) VALUES (?, ?, ?)";
-        $stmt = $con->getConnection()->prepare($sql);
+        $insert = $con->getConnection()->prepare($sql);
     
-        $stmt->bind_param("sss", $this->username, $hashedPassword, $this->email);
-        $stmt->execute();
+        $insert->bind_param("sss", $this->username, $hashedPassword, $this->email);
+        $insert->execute();
     }
 }
 
