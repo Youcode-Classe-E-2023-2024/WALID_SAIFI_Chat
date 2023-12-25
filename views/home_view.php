@@ -7,12 +7,7 @@
     </thead>
     <tbody>
 
-   <!-- <?php// foreach ($users as $user) : ?>
-        <tr>
-            <td><?php//$user['users_email']; ?></td>
-            <td><?php //$user['users_username']; ?></td>
-        </tr>
-    <?php// endforeach; ?>-->
+
 
     </tbody>
 </table>
