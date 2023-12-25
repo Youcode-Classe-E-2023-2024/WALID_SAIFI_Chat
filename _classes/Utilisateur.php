@@ -35,19 +35,18 @@ class Utilisateur {
         $this->email = $email;
     }
 
-    static function registre($username, $password, $email){
+    public function registre(){
         $con = new Database();
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO utilisateur (username, password, email) VALUES (?, ?, ?)";
         $insert = $con->getConnection()->prepare($sql);
     
-        $insert->bind_param("sss", $username, $hashedPassword, $email);
+        $insert->bind_param("sss", $this->username, $hashedPassword, $this->email);
         $insert->execute();
     }
 
 
-
-    static function login($enteredPassword, $email) {
+    public function login($enteredPassword, $email) {
         $sql_code = "SELECT * FROM utilisateur WHERE email = ?";
         $data = new Database();
         $stmt = $data->getConnection()->prepare($sql_code);
