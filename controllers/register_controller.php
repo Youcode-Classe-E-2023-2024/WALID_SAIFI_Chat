@@ -1,4 +1,5 @@
 <?php
+require_once("../_classes/Utilisateur.php");
 Utilisateur::register("john_doe", "password123", "john@example.com");
 if (isset($_POST['submit'])) {
     $username = $_POST['username']; 
