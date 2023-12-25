@@ -38,9 +38,10 @@
           <h2 class="titre_room">Liste des rooms</h2>
           <ul class="list-group room-list">
             <!-- Remplacez ces éléments li par vos rooms dynamiquement -->
-            <li class="list-group-item">Room 1</li>
-            <li class="list-group-item">Room 2</li>
-            <li class="list-group-item">Room 3</li>
+              <li class="list-group-item">Room 1</li>
+              <li class="list-group-item">Room 2</li>
+              <li class="list-group-item">Room 3</li>
+              <li class="list-group-item">Room 4</li>
           </ul>
         </div>
       </div>
