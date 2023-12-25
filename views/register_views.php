@@ -16,7 +16,7 @@
           <div class="card-body">
             <h2 class="card-title text-center mb-4">Register</h2>
 
-            <form id="registerForm" action="./views/register_model.php" method="post">
+            <form id="registerForm" action="index.php?page=regi" method="post">
               <div class="form-group">
                 <label for="registerEmail">Email</label>
                 <input type="email" name="email"  class="form-control" id="registerEmail" placeholder="Enter your email" required>
