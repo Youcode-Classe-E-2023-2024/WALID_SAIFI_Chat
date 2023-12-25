@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="chat.png" type="image/png">
+  <link rel="icon" href="../assets/pictures/chat.png" type="image/png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Chat Rooms</title>
@@ -13,7 +13,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
-        <img src="chat.png" alt="Logo" style="height: 30px; width: auto;">
+        <img src="./assets/pictures/chat.png" alt="Logo" style="height: 30px; width: auto;">
         Chat Rooms
       </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
