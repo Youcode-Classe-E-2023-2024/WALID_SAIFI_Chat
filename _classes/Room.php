@@ -21,7 +21,11 @@ class Room
 
         $insert->bind_param("s",$name);
 
-        $insert->execute();
+        if ($insert->execute()) {
+            return $db->insert_id;
+        } else {
+            return false;
+        }
 
     }
     static public function user_Room($id_user, $id_room){
@@ -31,12 +35,8 @@ class Room
         $insert = $db->prepare($sql);
 
         $insert->bind_param("ii", $id_user, $id_room);
+        $insert->execute();
 
-        if ($insert->execute()) {
-            return $db->insert_id;
-        } else {
-            return false;
-        }
     }
 
 
