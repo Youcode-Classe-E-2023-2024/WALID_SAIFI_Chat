@@ -19,7 +19,7 @@ CREATE TABLE room (
   name VARCHAR(255) NOT NULL,
 );
 
-CREATE TABLE utilisateurRoom (
+CREATE TABLE utilisateur_room (
   utilisateur_id INT,
   room_id INT,
   FOREIGN KEY (utilisateur_id) REFERENCES utilisateur(id),
