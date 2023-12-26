@@ -55,15 +55,17 @@
                 <label for="roomName">Sujet de la room</label>
                 <input type="text" class="form-control" id="roomName" placeholder="Sujet de la room">
               </div>
-              <div class="form-group">
-                <label for="userList">Utilisateurs</label>
-                <select class="form-control" id="userList" multiple>
-                  <!-- Example options, replace with your dynamic content -->
-                  <option value="user1">User 1</option>
-                  <option value="user2">User 2</option>
-                  <option value="user3">User 3</option>
-                </select>
-              </div>
+                <div class="form-group">
+                    <label for="userList">Utilisateurs</label>
+                    <select class="form-control" name="user_list[]" id="userList" multiple>
+                        <?php
+                        $users = utilisateur::getAll(); // Change $row to $users
+                        foreach ($users as $user) {
+                            echo "<option value='" . $user['id'] . "'>" . $user['username'] . "</option>";
+                        }
+                        ?>
+                    </select>
+                </div>
               <button type="submit" name="submit" class="btn btn-primary">Ajouter Room</button>
             </form>
           </div>
