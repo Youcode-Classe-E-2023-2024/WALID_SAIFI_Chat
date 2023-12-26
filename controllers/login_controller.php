@@ -7,7 +7,10 @@ if (isset($_POST['submit'])) {
     if (Utilisateur::login($password, $email)) {
 
         session_start();
+        
         $_SESSION['email'] = $email;
+        $_SESSION['id'] = Utilisateur::getId($email);
+
         header("location: index?page=room_chat");
     } else {
 
