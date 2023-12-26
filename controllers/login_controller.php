@@ -3,8 +3,14 @@
 if (isset($_POST['submit'])) {
     $password = $_POST['password'];
     $email = $_POST['email'];
-    dd($_POST);
-    Utilisateur::login($password,$email);
-    header("location:index?page=room_chat");
 
+    if (Utilisateur::login($password, $email)) {
+
+        session_start();
+        $_SESSION['email'] = $email;
+        header("location: index?page=room_chat");
+    } else {
+
+        echo "Login failed. Please check your credentials.";
+    }
 }
