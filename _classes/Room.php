@@ -1,5 +1,4 @@
 <?php
-
 class Room
 {
     public $name;
@@ -13,6 +12,8 @@ class Room
         $this->id = $room['id'];
         $this->name = $room['room'];
     }
+
+  
     static  public function createRoom($name){
         global $db;
         $sql = "INSERT INTO room (name) VALUES (?)";
@@ -26,7 +27,6 @@ class Room
         } else {
             return false;
         }
-
     }
     static public function user_Room($id_user, $id_room){
         global $db;
