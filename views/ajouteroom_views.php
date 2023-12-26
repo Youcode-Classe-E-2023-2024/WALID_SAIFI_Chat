@@ -56,14 +56,14 @@
                     <label for="userList">Utilisateurs</label>
                     <select class="form-control" name="user_list[]" id="userList" multiple>
                         <?php
-                        $users = utilisateur::getAll(); // Change $row to $users
+                        $users = Utilisateur::getAll(); // Change $row to $users
                         foreach ($users as $user) {
                             echo "<option value='" . $user['id'] . "'>" . $user['username'] . "</option>";
                         }
                         ?>
                     </select>
                 </div>
-              <button type="submit" name="submit" class="btn btn-primary">Ajouter Room</button>
+                <button type="button" id="submitBtn" class="btn btn-primary" onclick="submitFormAndReset()">Ajouter Room</button>
             </form>
           </div>
         </div>
