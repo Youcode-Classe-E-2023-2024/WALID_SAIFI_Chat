@@ -12,9 +12,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                  <button class="btn btn-primary mr-2" type="button" data-toggle="modal" data-target="#createRoomModal">Créer une room</button>
+          <li class="nav-item">
+       <a href="lien_vers_votre_annonce" class="btn btn-primary mr-2" role="button">
+        Créer une room
+                </a>
               </li>
+
               <li class="nav-item">
                   <button class="btn btn-primary mr-2" type="button" data-toggle="modal" data-target="#inviteRoomModal">Inviter dans une room</button>
               </li>
