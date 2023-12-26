@@ -13,7 +13,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-       <a href="lien_vers_votre_annonce" class="btn btn-primary mr-2" role="button">
+       <a href="index.php?page=ajouteroom" class="btn btn-primary mr-2" role="button">
         Créer une room
                 </a>
               </li>
