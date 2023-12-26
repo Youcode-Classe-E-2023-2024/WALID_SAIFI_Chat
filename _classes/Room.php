@@ -12,8 +12,6 @@ class Room
         $this->id = $room['id'];
         $this->name = $room['room'];
     }
-
-  
     static  public function createRoom($name){
         global $db;
         $sql = "INSERT INTO room (name) VALUES (?)";
