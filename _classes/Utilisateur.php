@@ -5,10 +5,16 @@ class Utilisateur {
     private $password;
     private $email;
 
-    public function __construct($username, $password, $email) {
-        $this->username = $username;
-        $this->password = $password;
-        $this->email = $email;
+    public function __construct($id){
+        global $db;
+        $result = $db->query("SELECT * FROM utilisateur WHERE id = '$id'");
+        $user = $result->fetch_assoc();
+
+        $this->id = $user['users_id'];
+
+        $this->username = $user['username'];
+        $this->email = $user['email'];
+        $this->password = $user['password'];
     }
 
     public function getUsername() {
@@ -36,16 +42,16 @@ class Utilisateur {
     }
 
     static public function registre($username, $password, $email){
-        $con = new Database();
+        global  $db;
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO utilisateur (username, password, email) VALUES (?, ?, ?)";
-        $insert = $con->getConnection()->prepare($sql);
+        $insert = $db->prepare($sql);
 
         $insert->bind_param("sss", $username, $hashedPassword, $email);
         $insert->execute();
     }
 
-    public function login($enteredPassword, $email) {
+    /*public function login($enteredPassword, $email) {
         $sql_code = "SELECT * FROM utilisateur WHERE email = ?";
         $data = new Database();
         $stmt = $data->getConnection()->prepare($sql_code);
@@ -60,8 +66,8 @@ class Utilisateur {
             }else{
                 return false; 
             }
-        }
-    }
+        }*/
+
 
     
 }
