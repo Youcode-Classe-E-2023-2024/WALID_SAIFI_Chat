@@ -62,15 +62,19 @@ class Utilisateur {
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $hashedPassword = $row['password'];
-
             if (password_verify($enteredPassword, $hashedPassword)) {
                 return true;
             } else {
                 return false;
             }
-        } else {
-            return false;
         }
+
+    }
+    static   public function logout() {
+        session_start();
+        $_SESSION = array();
+        session_destroy();
+        header("location: index.php?page=login");
 
     }
 
