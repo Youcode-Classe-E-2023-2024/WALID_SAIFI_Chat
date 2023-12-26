@@ -28,7 +28,7 @@
               <input type="password" name="password" class="form-control" id="registerPassword" placeholder="Enter password" required>
             </div>
 
-            <button type="submit" name="REG" class="btn btn-primary btn-block">Register</button>
+            <button type="submit" name="submit" class="btn btn-primary btn-block">Register</button>
           </form>
 
           <p class="mt-3 text-center">Already have an account? <a href="index.php?page=login">Login</a></p>
