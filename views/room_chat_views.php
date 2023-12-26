@@ -3,30 +3,33 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-        <img src="./assets/pictures/chat.png" alt="Logo" style="height: 30px; width: auto;">
-        Chat Rooms
+      <a class="navbar-brand" href="#">
+          <img src="./assets/pictures/chat.png" alt="Logo" style="height: 30px; width: auto;">
+          Chat Rooms
       </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-       
-        <li class="nav-item">
-          <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#createRoomModal">Créer une room</button>
-        </li>
-        <li class="nav-item">
-          <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#inviteRoomModal">Inviter dans une room</button>
-        </li>
-       
-       
-      </ul>
-      <li class="nav-item">
-        <button class="btn btn-danger" type="button">Déconnexion</button>
-      </li>
-    </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <button class="btn btn-primary mr-2" type="button" data-toggle="modal" data-target="#createRoomModal">Créer une room</button>
+              </li>
+              <li class="nav-item">
+                  <button class="btn btn-primary mr-2" type="button" data-toggle="modal" data-target="#inviteRoomModal">Inviter dans une room</button>
+              </li>
+              <li class="nav-item">
+                  <form method="post" action="index.php?page=room_views">
+                      <button class="btn btn-danger" name="dec" type="submit">Déconnexion</button>
+                  </form>
+              </li>
+          </ul>
+
+
+      </div>
   </nav>
+
+
 
   <!-- Contenu principal -->
   <div class="container-fluid mt-4">
