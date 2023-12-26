@@ -49,12 +49,9 @@
             <form action="index?page=ajouter_room" method="post">
               <div class="form-group">
                 <label for="roomName">Nom de la room</label>
-                <input type="text" class="form-control" id="roomName" placeholder="Entrez le nom de la room">
+                <input type="text" name="name"class="form-control" id="roomName" placeholder="Entrez le nom de la room">
               </div>
-              <div class="form-group">
-                <label for="roomName">Sujet de la room</label>
-                <input type="text" class="form-control" id="roomName" placeholder="Sujet de la room">
-              </div>
+
                 <div class="form-group">
                     <label for="userList">Utilisateurs</label>
                     <select class="form-control" name="user_list[]" id="userList" multiple>
