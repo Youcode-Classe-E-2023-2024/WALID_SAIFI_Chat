@@ -77,6 +77,11 @@ class Utilisateur {
         header("location: index.php?page=login");
 
     }
+    static  public  function  getAll(){
+        global $db;
+        $result = $db->query("SELECT * FROM  utilisateur");
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 
 
 
