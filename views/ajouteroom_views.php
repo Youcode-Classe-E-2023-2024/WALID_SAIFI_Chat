@@ -46,7 +46,7 @@
         <div id="add-room-section" class="card">
           <div class="card-body " >
             <h2 class="card-title text-center mb-4">Ajouter une room</h2>
-            <form action="index.php?page=ajouter_room" method="post">
+            <form action="index.php?page=ajouteroom" method="post">
               <div class="form-group">
                 <label for="roomName">Nom de la room</label>
                 <input type="text" name="name"class="form-control" id="roomName" placeholder="Entrez le nom de la room">
