@@ -1,6 +1,7 @@
 <?php
 
 class Utilisateur {
+    private  $id;
     private $username;
     private $password;
     private $email;
@@ -19,7 +20,6 @@ class Utilisateur {
     static public function getId($email) {
         global $db;
 
-        // Assuming 'email' is the column in the database table
         $sql = "SELECT id FROM utilisateur WHERE email = ?";
         $stm = $db->prepare($sql);
         $stm->bind_param("s", $email);
