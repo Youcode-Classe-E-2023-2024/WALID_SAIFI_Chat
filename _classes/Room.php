@@ -24,19 +24,20 @@ class Room
         $insert->execute();
 
     }
-    static  public  function  user_Room($id_user,$id_room){
+    static public function user_Room($id_user, $id_room){
         global $db;
 
-        $sql = "INSERT INTO utilisateur_room (utilisateur_id,room_id) VALUES (?, ?)";
-
+        $sql = "INSERT INTO utilisateur_room (utilisateur_id, room_id) VALUES (?, ?)";
         $insert = $db->prepare($sql);
 
-        $insert->bind_param("s",$name);
+        $insert->bind_param("ii", $id_user, $id_room);
 
         if ($insert->execute()) {
             return $db->insert_id;
+        } else {
+            return false;
         }
-
     }
+
 
 }
