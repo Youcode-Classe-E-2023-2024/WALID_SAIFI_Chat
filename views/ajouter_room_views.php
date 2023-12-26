@@ -1,39 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../assets/pictures/chat.png" type="image/png">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Chat Rooms</title>
-</head>
-<body>
+
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-        <img src="./assets/pictures/chat.png" alt="Logo" style="height: 30px; width: auto;">
-        Chat Rooms
+      <a class="navbar-brand" href="#">
+          <img src="./assets/pictures/chat.png" alt="Logo" style="height: 30px; width: auto;">
+          Chat Rooms
       </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#createRoomModal">Créer une room</button>
-        </li>
-        <li class="nav-item">
-          <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#inviteRoomModal">Inviter dans une room</button>
-        </li>
-        <li class="nav-item">
-          <button class="btn btn-danger" type="button">Déconnexion</button>
-        </li>
-      </ul>
-    </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <button class="btn btn-primary mr-2" type="button" data-toggle="modal" data-target="#createRoomModal">Créer une room</button>
+              </li>
+              <li class="nav-item">
+                  <button class="btn btn-primary mr-2" type="button" data-toggle="modal" data-target="#inviteRoomModal">Inviter dans une room</button>
+              </li>
+              <li class="nav-item">
+                  <form method="post" action="index.php?page=room_views">
+                      <button class="btn btn-danger" name="dec" type="submit">Déconnexion</button>
+                  </form>
+              </li>
+          </ul>
+      </div>
   </nav>
-
   <!-- Contenu principal -->
   <div class="container-fluid mt-4">
     <div class="row">
@@ -51,11 +42,11 @@
       </div>
 
       <!-- Formulaire d'ajout de room et d'utilisateurs -->
-      <div class="col-md-9">
+        <div class="col-md-9 bg-black">
         <div id="add-room-section" class="card">
-          <div class="card-body">
+          <div class="card-body " >
             <h2 class="card-title text-center mb-4">Ajouter une room</h2>
-            <form>
+            <form action="index?page=ajouter_room" method="post">
               <div class="form-group">
                 <label for="roomName">Nom de la room</label>
                 <input type="text" class="form-control" id="roomName" placeholder="Entrez le nom de la room">
@@ -73,7 +64,7 @@
                   <option value="user3">User 3</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary">Ajouter Room</button>
+              <button type="submit" name="submit" class="btn btn-primary">Ajouter Room</button>
             </form>
           </div>
         </div>
@@ -86,11 +77,3 @@
 
 
 
-  <!-- Scripts JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- Ajoutez vos propres scripts JS pour gérer les messages et l'interaction avec les rooms -->
-
-</body>
-</html>
