@@ -16,6 +16,24 @@ class Utilisateur {
         $this->email = $user['email'];
         $this->password = $user['password'];
     }
+    static public function getId($email) {
+        global $db;
+
+        // Assuming 'email' is the column in the database table
+        $sql = "SELECT id FROM utilisateur WHERE email = ?";
+        $stm = $db->prepare($sql);
+        $stm->bind_param("s", $email);
+        $stm->execute();
+        $result = $stm->get_result();
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $row = $result->fetch_assoc();
+            return $row['id'];
+        } else {
+            return null;
+        }
+    }
 
     public function getUsername() {
         return $this->username;
