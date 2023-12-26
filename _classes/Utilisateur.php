@@ -51,24 +51,31 @@ class Utilisateur {
         $insert->execute();
     }
 
-    /*public function login($enteredPassword, $email) {
+    static public function login($enteredPassword, $email) {
+        global $db;
         $sql_code = "SELECT * FROM utilisateur WHERE email = ?";
-        $data = new Database();
-        $stmt = $data->getConnection()->prepare($sql_code);
+        $stmt = $db->prepare($sql_code);
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
+
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            $Password = $row['password'];
-            if (password_verify($enteredPassword, $Password)) {
+            $hashedPassword = $row['password'];
+
+            if (password_verify($enteredPassword, $hashedPassword)) {
                 return true;
-            }else{
-                return false; 
+            } else {
+                return false;
             }
-        }*/
+        } else {
+            return false;
+        }
+
+    }
 
 
-    
+
+
 }
 
