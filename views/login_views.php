@@ -18,13 +18,13 @@
             <form id="loginForm" action="index.php?page=login" method="post">
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password" required>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">Login</button>
+              <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>
             </form>
             <p class="mt-3 text-center">Don't have an account? <a href="index.php?page=register">Register</a></p>
           </div>
