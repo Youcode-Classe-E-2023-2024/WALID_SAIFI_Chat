@@ -17,6 +17,7 @@ CREATE TABLE Friend (
 CREATE TABLE room (
   id INT PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(255) NOT NULL,
+  id_createur INT NOT NULL
 );
 
 CREATE TABLE utilisateur_room (
