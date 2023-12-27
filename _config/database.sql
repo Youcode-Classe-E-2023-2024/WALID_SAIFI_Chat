@@ -3,15 +3,15 @@ CREATE TABLE utilisateur (
   utilisateurname VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL
-); ""
+); 
 
 CREATE TABLE Friend (
   id INT PRIMARY KEY AUTO_INCREMENT,
   utilisateur_id INT,
   friend_id INT,
   status VARCHAR(20) NOT NULL,
-  FOREIGN KEY (utilisateur_id) REFERENCES utilisateur(id),
-  FOREIGN KEY (friend_id) REFERENCES utilisateur(id)
+  FOREIGN KEY (utilisateur_id) REFERENCES utilisateur(id) ON DELETE CASCADE
+  FOREIGN KEY (friend_id) REFERENCES utilisateur(id) ON DELETE CASCADE
 );
 
 CREATE TABLE room (
@@ -23,8 +23,8 @@ CREATE TABLE room (
 CREATE TABLE utilisateur_room (
   utilisateur_id INT,
   room_id INT,
-  FOREIGN KEY (utilisateur_id) REFERENCES utilisateur(id),
-  FOREIGN KEY (room_id) REFERENCES Room(id)
+  FOREIGN KEY (utilisateur_id) REFERENCES utilisateur(id) ON DELETE CASCADE,
+  FOREIGN KEY (room_id) REFERENCES Room(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Message (
