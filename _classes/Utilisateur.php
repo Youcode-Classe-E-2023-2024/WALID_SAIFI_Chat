@@ -82,13 +82,13 @@ class Utilisateur {
         }
 
     }
-    static   public function logout() {
-        session_start();
-        $_SESSION = array();
-        session_destroy();
-        header("location: index.php?page=login");
 
+    static public function logout() {
+        session_destroy();
+        header("index.php?page=login");
     }
+
+
     static  public  function  getAll(){
         global $db;
         $result = $db->query("SELECT * FROM  utilisateur");
