@@ -18,7 +18,7 @@
                   <button class="btn btn-primary mr-2" type="button" data-toggle="modal" data-target="#inviteRoomModal">Inviter dans une room</button>
               </li>
               <li class="nav-item">
-                  <form method="post" action="index.php?page=room_views">
+                  <form method="post" action="index.php?page=room_chat">
                       <button class="btn btn-danger" name="dec" type="submit">Déconnexion</button>
                   </form>
               </li>
@@ -56,7 +56,7 @@
                     <label for="userList">Utilisateurs</label>
                     <select class="form-control" name="user_list[]" id="userList" multiple>
                         <?php
-                        $users = Utilisateur::getAll(); 
+
                         foreach ($users as $user) {
                             echo "<option value='" . $user['id'] . "'>" . $user['username'] . "</option>";
                         }
