@@ -36,7 +36,12 @@ class Room
         $insert->execute();
 
     }
-    
+    static public function getAllroom(){
+        global $db;
+        $result = $db->query("SELECT * FROM  room");
+        return $result->fetch_all(MYSQLI_ASSOC);
+
+    }
 
 
 }
