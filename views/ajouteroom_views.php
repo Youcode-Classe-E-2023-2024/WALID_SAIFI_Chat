@@ -56,7 +56,7 @@
                     <label for="userList">Utilisateurs</label>
                     <select class="form-control" name="user_list[]" id="userList" multiple>
                         <?php
-                        $users = Utilisateur::getAll(); // Change $row to $users
+                        $users = Utilisateur::getAll(); 
                         foreach ($users as $user) {
                             echo "<option value='" . $user['id'] . "'>" . $user['username'] . "</option>";
                         }
