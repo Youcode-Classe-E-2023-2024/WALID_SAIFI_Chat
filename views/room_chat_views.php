@@ -22,7 +22,7 @@
                   <button class="btn btn-primary mr-2" type="button" data-toggle="modal" data-target="#inviteRoomModal">Inviter dans une room</button>
               </li>
               <li class="nav-item">
-                  <form method="post" action="index.php?page=room_views">
+                  <form method="post" action="index.php?page=room_chat">
                       <button class="btn btn-danger" name="dec" type="submit">Déconnexion</button>
                   </form>
               </li>
