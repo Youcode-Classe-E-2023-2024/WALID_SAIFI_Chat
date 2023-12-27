@@ -19,21 +19,15 @@ class Utilisateur {
     }
     static public function getId($email) {
         global $db;
-
-        $sql = "SELECT id FROM utilisateur WHERE email = ?";
-        $stm = $db->prepare($sql);
-        $stm->bind_param("s", $email);
-        $stm->execute();
-        $result = $stm->get_result();
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $row = $result->fetch_assoc();
-            return $row['id'];
-        } else {
-            return null;
-        }
+        $sql = "SELECT id FROM utilisateur WHERE email = '$email'";
+        $result = $db->query($sql);
+        $row = $result->fetch_assoc();
+            if($row['id']){
+                return $row['id'];
+            }
+        return NULL;
     }
+    
 
     public function getUsername() {
         return $this->username;
