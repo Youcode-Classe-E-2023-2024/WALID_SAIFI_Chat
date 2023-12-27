@@ -14,3 +14,4 @@ if(isset($_POST['submit']) ){
       }
 
 }
+$users = Utilisateur::getAll();
