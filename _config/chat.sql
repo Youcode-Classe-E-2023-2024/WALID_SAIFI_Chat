@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 27 déc. 2023 à 16:57
--- Version du serveur : 10.4.28-MariaDB
--- Version de PHP : 8.2.4
+-- Généré le : mer. 27 déc. 2023 à 23:45
+-- Version du serveur : 10.4.27-MariaDB
+-- Version de PHP : 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,8 +44,18 @@ CREATE TABLE `message` (
   `utilisateur_id` int(11) DEFAULT NULL,
   `room_id` int(11) DEFAULT NULL,
   `content` text DEFAULT NULL,
-  `timestamp` datetime DEFAULT NULL
+  `timestamp` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `message`
+--
+
+INSERT INTO `message` (`id`, `utilisateur_id`, `room_id`, `content`, `timestamp`) VALUES
+(1, 5, 8, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '2023-12-27 23:16:48'),
+(2, 6, 8, 'ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd', '2023-12-27 23:18:47'),
+(3, 5, 8, 'ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg', '2023-12-27 23:19:29'),
+(4, 6, 2, 'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU', '2023-12-27 23:28:47');
 
 -- --------------------------------------------------------
 
@@ -68,7 +78,8 @@ INSERT INTO `room` (`id`, `name`, `id_createur`) VALUES
 (2, 'youcode', 7),
 (3, 'efkojifjifjz', 7),
 (6, 'efkojifjifjz', 7),
-(7, 'krrkkrkkrkr', 7);
+(7, 'krrkkrkkrkr', 7),
+(8, 'Discord', 7);
 
 -- --------------------------------------------------------
 
@@ -114,7 +125,10 @@ INSERT INTO `utilisateur_room` (`utilisateur_id`, `room_id`) VALUES
 (6, 6),
 (5, 7),
 (6, 7),
-(7, 7);
+(7, 7),
+(5, 8),
+(6, 8),
+(7, 8);
 
 --
 -- Index pour les tables déchargées
@@ -169,13 +183,13 @@ ALTER TABLE `friend`
 -- AUTO_INCREMENT pour la table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `room`
 --
 ALTER TABLE `room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
