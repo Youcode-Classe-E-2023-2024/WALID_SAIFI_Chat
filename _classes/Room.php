@@ -43,18 +43,28 @@ class Room
         return $result->fetch_all(MYSQLI_ASSOC);
 
     }
-    static public function getAll_dernier_room($id){
+    static public function getAllroom_massage($id_room){
+       global $db;
+           $result = $db->query("SELECT * FROM room JOIN
+           message on room.id = message.room_id JOIN
+           utilisateur on utilisateur.id=message.utilisateur_id; Room.id='$id_room'");
+           return $result->fetch_all(MYSQLI_ASSOC);
+    }
+ /*   static public function getAll_dernier_room($id){
         global $db;
         $result = $db->query("SELECT * FROM room WHERE id IN
          (SELECT MAX(id) FROM room JOIN utilisateur_room ON room.id = utilisateur_room.room_id WHERE utilisateur_room.utilisateur_id = '$id')");
         return $result->fetch_all(MYSQLI_ASSOC);
-    }
-    static public function get_All_massage_room($id){
+    }*/
+    static public function ajouter_message($id_user, $id_room, $content) {
         global $db;
-        $result = $db->query("SELECT * FROM message WHERE utilisateur_id = $id");
-        return $result->fetch_all(MYSQLI_ASSOC);
-
+        $sql = "INSERT INTO Message (utilisateur_id, room_id, content) 
+                        VALUES ('$id_user', '$id_room', '$content')";
+        $db->query($sql);
+    
+ 
     }
+    
     
 
 
