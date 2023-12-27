@@ -3,7 +3,7 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.php?page=room_chat">
           <img src="./assets/pictures/chat.png" alt="Logo" style="height: 30px; width: auto;">
           Chat Rooms
       </a>
