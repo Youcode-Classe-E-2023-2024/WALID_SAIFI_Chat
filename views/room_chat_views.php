@@ -44,7 +44,8 @@
           <h2 class="titre_room">Liste des rooms</h2>
           <ul class="list-group room-list">
             <?php
-                    $rom = Room::getAllroom();
+            $id=$_SESSION['id'];
+                     $rom = Room::getAllroom($id);
                         foreach ($rom as $tab) {
                            echo "<a href='index.php?page=room_chat&id=" . $tab['id'] . "'><li class=\"list-group-item\">" . $tab['name'] . "</li></a>";
                        } 
