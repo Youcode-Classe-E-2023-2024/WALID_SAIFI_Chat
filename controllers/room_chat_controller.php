@@ -3,13 +3,12 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-
-if(!isset( $_SESSION['id'])){
+if(empty( $_SESSION['id'])){
     header("location: index.php?page=login");
 }
-       echo $_SESSION['id'];
+    echo $_SESSION['id'];
      if(isset($_POST['dec'])){
-    utilisateur::logout();
+      utilisateur::logout();
     }
 
 ?>
