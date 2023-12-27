@@ -46,7 +46,7 @@
         <div id="add-room-section" class="card">
           <div class="card-body " >
             <h2 class="card-title text-center mb-4">Ajouter une room</h2>
-              <form id="addRoomForm" action="index.php?page=ajouteroom" method="post">
+              <form action="index.php?page=ajouteroom" method="post">
               <div class="form-group">
                 <label for="roomName">Nom de la room</label>
                 <input type="text" name="name"class="form-control" id="roomName" placeholder="Entrez le nom de la room">
@@ -63,7 +63,7 @@
                         ?>
                     </select>
                 </div>
-                <button type="button" id="submitBtn" class="btn btn-primary" onclick="submitFormAndReset()">Ajouter Room</button>
+                <button type="submit" name="submit" class="btn btn-primary">Ajouter Room</button>
             </form>
           </div>
         </div>
