@@ -61,7 +61,7 @@ class Room
     static public function get_name_room($id)
     {
         global $db;
-        $stmt = $db->prepare("SELECT * FROM room WHERE id = ?");
+        $stmt = $db->prepare("SELECT DISTINCT name FROM room WHERE id = ?");
         $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -69,6 +69,7 @@ class Room
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
 
 
 
