@@ -77,6 +77,7 @@
                         <button class="btn btn-primary" onclick="sendMessage();">Envoyer</button>
                     </div>
                 </div>
+                <div id="ajax-response"></div>
 
             </div>
         </div>
