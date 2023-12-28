@@ -72,6 +72,8 @@
                 </div>
 
                 <div class="input-group message-input">
+                <input type="hidden" name="user_id" id="userIdInput" value="<?php echo $id; ?>">
+                   <input type="hidden" name="room_id" id="roomIdInput" value="<?php echo $_SESSION['id_room']; ?>">
                     <textarea id="message" class="form-control" placeholder="Type your message..."></textarea>
                     <div class="input-group-append">
                         <button class="btn btn-primary" onclick="sendMessage();">Envoyer</button>
