@@ -32,7 +32,8 @@ CREATE TABLE Message (
   utilisateur_id INT,
   room_id INT,
   content TEXT,
-  timestamp DATETIME,
+  timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (utilisateur_id) REFERENCES utilisateur(id),
   FOREIGN KEY (room_id) REFERENCES Room(id)
 );
+
