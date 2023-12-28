@@ -59,10 +59,8 @@
         <!-- Zone de messages -->
         <div class="col-md-9">
             <div id="message-section">
-                <?php
 
-                ?>
-                <h2 class="titre_room">Messages Room 1</h2>
+                <h2 class="titre_room">Messages Room</h2>
 
                 <div class="message-container">
                     <?php
@@ -73,15 +71,14 @@
                     ?>
                 </div>
 
-              <form action="index.php?page=room" method="post">
+
                 <div class="input-group message-input">
-                    <textarea class="form-control" placeholder="Type your message..."></textarea>
+                    <textarea id = message class="form-control" placeholder="Type your message..."></textarea>
                     <div class="input-group-append">
-                        <button class="btn btn-primary" name="message" type="submit">Envoye</button>
+                        <button class="btn btn-primary" onclick="message();" >Envoye</button>
                     </div>
                      </div>
 
-              </form>
             </div>
         </div>
 
