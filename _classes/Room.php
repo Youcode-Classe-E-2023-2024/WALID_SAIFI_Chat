@@ -43,13 +43,15 @@ class Room
         return $result->fetch_all(MYSQLI_ASSOC);
 
     }
-    static public function get_Allroom_massage($id_room){
-       global $db;
-           $result = $db->query("SELECT * FROM room JOIN
-           message on room.id = message.room_id JOIN
-           utilisateur on utilisateur.id=message.utilisateur_id; Room.id='$id_room'");
-           return $result->fetch_all(MYSQLI_ASSOC);
+    static public function get_Allroom_massage($id_room) {
+        global $db;
+        $result = $db->query("SELECT * FROM room 
+                         JOIN message ON room.id = message.room_id 
+                         JOIN utilisateur ON utilisateur.id = message.utilisateur_id 
+                         WHERE room.id='$id_room'");
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
+
  /*   static public function getAll_dernier_room($id){
         global $db;
         $result = $db->query("SELECT * FROM room WHERE id IN
