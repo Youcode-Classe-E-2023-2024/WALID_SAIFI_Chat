@@ -43,7 +43,7 @@ class Room
         return $result->fetch_all(MYSQLI_ASSOC);
 
     }
-    static public function getAllroom_massage($id_room){
+    static public function get_Allroom_massage($id_room){
        global $db;
            $result = $db->query("SELECT * FROM room JOIN
            message on room.id = message.room_id JOIN
