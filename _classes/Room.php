@@ -52,22 +52,26 @@ class Room
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
- /*   static public function getAll_dernier_room($id){
-        global $db;
-        $result = $db->query("SELECT * FROM room WHERE id IN
-         (SELECT MAX(id) FROM room JOIN utilisateur_room ON room.id = utilisateur_room.room_id WHERE utilisateur_room.utilisateur_id = '$id')");
-        return $result->fetch_all(MYSQLI_ASSOC);
-    }*/
     static public function ajouter_message($id_user, $id_room, $content) {
         global $db;
         $sql = "INSERT INTO Message (utilisateur_id, room_id, content) 
                         VALUES ('$id_user', '$id_room', '$content')";
         $db->query($sql);
-    
- 
     }
-    
-    
+    static public function get_name_room($id)
+    {
+        global $db;
+        $stmt = $db->prepare("SELECT * FROM room WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+
+
 
 
 }
