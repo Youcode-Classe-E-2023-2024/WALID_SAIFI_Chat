@@ -70,13 +70,13 @@
                     }
                     ?>
                 </div>
-                
+
                 <div class="input-group message-input">
-                    <textarea id = message class="form-control" placeholder="Type your message..."></textarea>
+                    <textarea id="message" class="form-control" placeholder="Type your message..."></textarea>
                     <div class="input-group-append">
-                        <button class="btn btn-primary" onclick="message();" >Envoye</button>
+                        <button class="btn btn-primary" onclick="sendMessage();">Envoyer</button>
                     </div>
-                     </div>
+                </div>
 
             </div>
         </div>
