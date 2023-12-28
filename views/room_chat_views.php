@@ -44,10 +44,8 @@
           <h2 class="titre_room">Liste des rooms</h2>
           <ul class="list-group room-list">
             <?php
-            $id=$_SESSION['id'];
-                     $rom = Room::getAllroom($id);
                         foreach ($rom as $tab) {
-                           echo "<a href='index.php?page=room_chat&id=" . $tab['id'] . "'><li class=\"list-group-item\">" . $tab['name'] . "</li></a>";
+                           echo "<a href='index.php?page=room&id=" . $tab['id'] . "'><li class=\"list-group-item\">" . $tab['name'] . "</li></a>";
                        } 
             ?>
 
@@ -62,7 +60,9 @@
           <h2 class="titre_room">Messages Room 1</h2>
           <div class="message-container">
             <!-- Messages exemples -->
-            <div class="mes">User1: Hello!</div>
+              <div class="mes">User1:date:<br>
+                  Hellodddd!
+              </div>
             <div class="mes">User2: Hi there!</div>
             <div class="mes">User1: How are you?</div>
             <div class="mes">User2: I'm good, thanks!</div>
