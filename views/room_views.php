@@ -70,8 +70,7 @@
                     }
                     ?>
                 </div>
-
-
+                
                 <div class="input-group message-input">
                     <textarea id = message class="form-control" placeholder="Type your message..."></textarea>
                     <div class="input-group-append">
