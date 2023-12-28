@@ -72,8 +72,9 @@
                 </div>
 
                 <div class="container mt-5">
+                <form id="sendMessageForm" method="post">
     <div class="input-group message-input">
-        <form id="sendMessageForm" method="post">
+       
             <input type="hidden" name="user_id" id="userIdInput" value="<?php echo $id; ?>">
             <input type="hidden" name="room_id" id="roomIdInput" value="<?php echo $_SESSION['id_room']; ?>">
             <textarea type="text" id="messageInput" name="messageInput" class="form-control" placeholder="Type something here..."></textarea>
