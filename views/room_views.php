@@ -47,7 +47,7 @@
                     $id=$_SESSION['id'];
                     $rom = Room::getAllroom($id);
                     foreach ($rom as $tab) {
-                        echo "<a href='index.php?page=room_chat&id=" . $tab['id'] . "'><li class=\"list-group-item\">" . $tab['name'] . "</li></a>";
+                        echo "<a href='index.php?page=room&id=" . $tab['id'] . "'><li class=\"list-group-item\">" . $tab['name'] . "</li></a>";
                     }
                     ?>
 
@@ -59,11 +59,13 @@
         <!-- Zone de messages -->
         <div class="col-md-9">
             <div id="message-section">
+                <?php
+
+                ?>
                 <h2 class="titre_room">Messages Room 1</h2>
+
                 <div class="message-container">
                     <?php
-
-
                     foreach ($res as $tab) {
                         echo '<div class="mes">' . $tab['username'] . ':' . $tab['timestamp'] . ':<br>';
                         echo $tab['content'] . '</div>';
