@@ -21,7 +21,7 @@ document.getElementById('sendButton').addEventListener('click', function() {
   });
 
 
-  $(document).ready(function () {
+  /*$(document).ready(function () {
     // Function to load room messages via AJAX
     function loadRoomMessages() {
         var roomId = <? php echo json_encode($_GET['id']); ?>; 
@@ -43,4 +43,4 @@ document.getElementById('sendButton').addEventListener('click', function() {
 
  
     setInterval(loadRoomMessages, 5000); 
-});
+});*/
